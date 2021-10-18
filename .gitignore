@@ -1,0 +1,6 @@
+# Ignore directories
+.idea/
+venv/
+
+# Ignore other files
+*.log
