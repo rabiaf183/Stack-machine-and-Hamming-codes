@@ -29,18 +29,18 @@ class HammingCode:
         self.parity_bits = 0  # r
 
         # Predefined non-systematic generator matrix G'
-        g = []
+        gns = []
 
         # Convert non-systematic G' into systematic matrices G, H
-        self.g = self.__convert_to_gns(g)
-        self.hns = self.__derive_hns(self.gns)
+        self.g = self.__convert_to_g(gns)
+        self.h = self.__derive_h(self.g)
 
-    def __convert_to_gns(self, g: List):
+    def __convert_to_g(self, gns: List):
         """
         Converts a non-systematic generator matrix into a systematic
 
         Args:
-            g (List): Non-systematic generator matrix
+            gns (List): Non-systematic generator matrix
         Returns:
             list: Converted systematic generator matrix
         """
@@ -48,12 +48,12 @@ class HammingCode:
         # REPLACE "pass" WITH YOUR IMPLEMENTATION
         pass
 
-    def __derive_hns(self, gns: List):
+    def __derive_h(self, g: List):
         """
         This method executes all steps necessary to derive H from G.
 
         Args:
-            gns (List):
+            g (List):
         Returns:
             list:
         """
